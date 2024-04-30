@@ -23,10 +23,9 @@ router.get('/:exerciseId', async (req, res) => {
   }
 })
 // POST one exercise
-//router.post('/', isAuthenticated, async (req, res) => { -> to create authenticated route for those who are instuctures
-router.post('/', async (req, res) => {
+router.post('/', isAuthenticated, async (req, res) => {
     const newExercisePayload = req.body 
-   // newExercisePayload.createdBy = req.tokenPayload.userId
+    newExercisePayload.createdBy = req.tokenPayload.userId
     try {
       const newExercise = await Exercise.create(newExercisePayload)
       res.status(201).json(newExercise)

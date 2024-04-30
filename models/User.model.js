@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the Book model to whatever makes sense in this case
+// Schema to create User model
 const userSchema = new Schema(
   {
     name: {
