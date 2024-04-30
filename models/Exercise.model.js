@@ -44,6 +44,7 @@ const exerciseSchema = new Schema(
           },
         },
       ],
+      default: undefined, // Allows 'sets' to be empty if not provided
     },
   },
   {

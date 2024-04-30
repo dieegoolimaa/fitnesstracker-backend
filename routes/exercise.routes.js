@@ -1,4 +1,4 @@
-const Exercise = require('../models/Book.model')
+const Exercise = require('../models/Exercise.model')
 const { isAuthenticated } = require('../middlewares/route-guard.middleware')
 const router = require('express').Router()
 
@@ -23,11 +23,12 @@ router.get('/:exerciseId', async (req, res) => {
   }
 })
 // POST one exercise
-router.post('/', isAuthenticated, async (req, res) => {
+//router.post('/', isAuthenticated, async (req, res) => { -> to create authenticated route for those who are instuctures
+router.post('/', async (req, res) => {
     const newExercisePayload = req.body 
-    newExercisePayload.createdBy = req.tokenPayload.userId
+   // newExercisePayload.createdBy = req.tokenPayload.userId
     try {
-      const newExercise = await Book.create(newExercisePayload)
+      const newExercise = await Exercise.create(newExercisePayload)
       res.status(201).json(newExercise)
     } catch (error) {
       console.log(error)
@@ -57,4 +58,5 @@ router.delete('/:exerciseId', async (req, res) => {
     res.status(500).json(error)
   }
 })
+
 module.exports = router
