@@ -88,10 +88,10 @@
     ]
   },
   {
-    "name": "Plank",
-    "target_muscle": "Abs, obliques, lower back",
-    "description": "Bodyweight exercise strengthening abs, obliques, and lower back. Get into a high plank position with forearms on the floor and body in a straight line from head to heels. Hold this position for as long as possible with good form.",
-    "label": "Core",
+    "name": "Roman Chair Leg Raise",
+    "target_muscle": "Lower abs, hip flexors",
+    "description": "Isolates and strengthens the lower abs and hip flexors. Sit in a Roman chair with your back straight and knees bent at 90 degrees. Engage your core and slowly raise your legs straight out in front of you until parallel to the ground (or as high as comfortable). Hold for a second, then lower back down with control.",
+    "label": "Abs",
     "sets": [
       {
         "reps": 10
