@@ -2,6 +2,7 @@ const { Schema, model } = require("mongoose");
 
 // Schema to create User model
 const userSchema = new Schema(
+  
   {
     name: {
       type: String,
@@ -17,16 +18,35 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Password is required."],
     },
-
-    // If is false is client/user if is true is instructor
+    age: {
+      type: Number,
+      required: false,
+    },
+    gender: {
+      type: String,
+      enum: ['male', 'female', 'other'],
+      required: false,
+    },
     isInstructor: {
       type: Boolean,
       default: false,
       required: [false, "IsInstructor is required."],
     },
+    height: {
+      type: Number,
+      required: false,
+    },
+    weight: {
+      type: Number,
+      required: false,
+    },
+    workoutFrequency: {
+      type: String,
+      enum: ['daily', 'weekly', 'monthly'],
+      required: false,
+    },
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: true,
   }
 );

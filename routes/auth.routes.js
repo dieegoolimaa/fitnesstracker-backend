@@ -73,4 +73,35 @@ router.get("/verify", isAuthenticated, (req, res) => {
   res.json({ message: "Hello", data: req.tokenPayload });
 });
 
+
+// Profile route
+router.get('/profile', isAuthenticated, async (req, res) => {
+  try {
+    // Extract user ID from token payload
+    const userId = req.tokenPayload.userId;
+
+    // Fetch user profile data from the database
+    const userProfile = await User.findById(userId);
+
+    if (!userProfile) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Respond with the user profile data including all fields
+    res.status(200).json({
+      email: userProfile.email,
+      age: userProfile.age,
+      gender: userProfile.gender,
+      isInstructor: userProfile.isInstructor,
+      height: userProfile.height,
+      weight: userProfile.weight,
+      workoutFrequency: userProfile.workoutFrequency,
+      // Include other fields as needed
+    });
+  } catch (error) {
+    console.error('Error fetching user profile:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 module.exports = router;

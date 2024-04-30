@@ -4,7 +4,15 @@ router.get('/', (req, res) => {
   res.json('All good in here')
 })
 
-const exerciseRoutes = require('./exercise.routes')
-router.use('/exercises', exerciseRoutes)
+//route files
+const authRoutes = require('./auth.routes');
+const exerciseRoutes = require('./exercise.routes');
+
+
+// Use the route files
+router.use('/auth', authRoutes);
+router.use('/exercises', exerciseRoutes);
+
+
 
 module.exports = router
