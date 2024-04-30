@@ -1,6 +1,7 @@
 const User = require("../models/User.model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+
 const { isAuthenticated } = require("../middlewares/route-guard.middleware");
 
 const router = require("express").Router();
@@ -19,7 +20,7 @@ router.post("/signup", async (req, res) => {
   // Create a new User
   try {
     const newUser = await User.create({
-      email: req.body.username,
+      email: req.body.email,
       passwordHash,
     });
 
@@ -36,7 +37,7 @@ router.post("/login", async (req, res) => {
   // Check if we have a user with this username
   try {
     const potentialUser = await User.findOne({
-      email: req.body.username.toLowerCase(),
+      name: req.body.name.toLowerCase(),
     });
     if (potentialUser) {
       // Check if the password is correct

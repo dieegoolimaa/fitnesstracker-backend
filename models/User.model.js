@@ -5,7 +5,7 @@ const userSchema = new Schema(
   {
     name: {
       type: String,
-      required: [true, "Name is required."],
+      required: false,
       trim: true,
     },
     email: {
@@ -22,7 +22,7 @@ const userSchema = new Schema(
     isInstructor: {
       type: Boolean,
       default: false,
-      required: [true, "IsInstructor is required."],
+      required: [false, "IsInstructor is required."],
     },
   },
   {
