@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Push-up",
+    "target_muscle": "Chest, shoulders, triceps",
+    "description": "Bodyweight exercise strengthening chest, shoulders, and triceps. Start in a high plank position, lower your chest down, elbows at 90 degrees, then push back up.",
+    "label": "Chest",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Bench press",
+    "target_muscle": "Chest, shoulders, triceps",
+    "description": "Weighted exercise for chest, shoulders, and triceps. Lie on a bench with a barbell above your chest, lower it down, then press back up.",
+    "label": "Chest",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Pull-up",
+    "target_muscle": "Back (lats), biceps, forearms",
+    "description": "Bodyweight exercise for back (lats), biceps, and forearms. Hang from a bar, pull yourself up until your chin clears the bar, then lower yourself down.",
+    "label": "Back",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Barbell row",
+    "target_muscle": "Back (lats), biceps",
+    "description": "Weighted exercise for back (lats) and biceps. Stand with a barbell on the floor, hinge at hips and knees, grab the bar, row weight towards your chest, then lower back down.",
+    "label": "Back",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Military press",
+    "target_muscle": "Shoulders",
+    "description": "Weighted exercise for shoulders. Stand or sit with a barbell held at shoulder level, press the weight directly overhead, then lower back down.",
+    "label": "Shoulders",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Lateral raise",
+    "target_muscle": "Shoulders",
+    "description": "Exercise targeting outer shoulders. Stand with dumbbells held at your sides, raise your arms out to the side until shoulder height, then lower back down.",
+    "label": "Shoulders",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Squat",
+    "target_muscle": "Quads, hamstrings, glutes",
+    "description": "Bodyweight or weighted exercise for quads, hamstrings, and glutes. Stand with feet shoulder-width apart, lower yourself down as if sitting in a chair, keeping your back straight and core engaged, then push back up.",
+    "label": "Legs",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Deadlift",
+    "target_muscle": "Hamstrings, glutes, lower back",
+    "description": "Weighted exercise for hamstrings, glutes, and lower back. Stand with a barbell on the floor, hinge at hips and knees, grasp the bar with palms facing down, lift the weight up keeping your back straight, then lower back down.",
+    "label": "Legs",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  },
+  {
+    "name": "Plank",
+    "target_muscle": "Abs, obliques, lower back",
+    "description": "Bodyweight exercise strengthening abs, obliques, and lower back. Get into a high plank position with forearms on the floor and body in a straight line from head to heels. Hold this position for as long as possible with good form.",
+    "label": "Core",
+    "sets": [
+      {
+        "reps": 10
+      }
+    ]
+  }
+]
