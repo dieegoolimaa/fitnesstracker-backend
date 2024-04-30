@@ -37,7 +37,7 @@ router.post("/login", async (req, res) => {
   // Check if we have a user with this username
   try {
     const potentialUser = await User.findOne({
-      name: req.body.name.toLowerCase(),
+      email: req.body.email.toLowerCase(),
     });
     if (potentialUser) {
       // Check if the password is correct
