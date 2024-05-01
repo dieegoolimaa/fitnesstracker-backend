@@ -8,7 +8,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/push-up-1.png",
+    "image-2": "./images/push-up-2.png"
   },
   {
     "name": "Bench press",
@@ -19,7 +21,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/bench-press-1.png",
+    "image-2": "./images/bench-press-2.png"
   },
   {
     "name": "Pull-up",
@@ -30,7 +34,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/pull-up-1.png",
+    "image-2": "./images/pull-up-2.png"
   },
   {
     "name": "Barbell row",
@@ -41,7 +47,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/barbell-row-1.png",
+    "image-2": "./images/barbell-row-2.png"
   },
   {
     "name": "Military press",
@@ -52,7 +60,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/military-press-1.png",
+    "image-2": "./images/military-press-2.png"
   },
   {
     "name": "Lateral raise",
@@ -63,7 +73,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/lateral-raise-1.png",
+    "image-2": "./images/lateral-raise-2.png"
   },
   {
     "name": "Squat",
@@ -74,7 +86,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/squat-1.png",
+    "image-2": "./images/squat-2.png"
   },
   {
     "name": "Deadlift",
@@ -85,7 +99,9 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/deadlift-1.png",
+    "image-2": "./images/deadlift-2.png"
   },
   {
     "name": "Roman Chair Leg Raise",
@@ -96,6 +112,8 @@
       {
         "reps": 10
       }
-    ]
+    ],
+    "image-1": "./images/roman-chair-leg-raise-1.png",
+    "image-2": "./images/roman-chair-leg-raise-2.png"
   }
 ]
