@@ -20,9 +20,16 @@ router.post("/signup", async (req, res) => {
   // Create a new User
   try {
     const newUser = await User.create({
-      email: req.body.email,
-      passwordHash,
-    });
+      name: req.body.name,
+  email: req.body.email,
+  passwordHash,
+  age: req.body.age,
+  gender: req.body.gender,
+  isInstructor: req.body.isInstructor,
+  height: req.body.height,
+  weight: req.body.weight,
+  workoutFrequency: req.body.workoutFrequency
+});
 
     res.status(201).json(newUser);
   } catch (error) {
@@ -89,6 +96,7 @@ router.get('/profile', isAuthenticated, async (req, res) => {
 
     // Respond with the user profile data including all fields
     res.status(200).json({
+      name: userProfile.name,
       email: userProfile.email,
       age: userProfile.age,
       gender: userProfile.gender,
