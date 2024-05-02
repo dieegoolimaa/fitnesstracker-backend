@@ -24,7 +24,7 @@ const exerciseSchema = new Schema(
     equipment: {
       type: String,
       trim: true,
-      required: [false, "Equipment is not required."],
+      required: [false, "Equipment is optional."],
     },
     sets: {
       // Array of objects defining sets within the exercise
@@ -45,6 +45,10 @@ const exerciseSchema = new Schema(
         },
       ],
       default: undefined, // Allows 'sets' to be empty if not provided
+    },
+    selected: {
+      type: Boolean,
+      default: false, // Default value for selected property
     },
   },
   {

@@ -7,6 +7,9 @@ router.get('/', async (req, res) => {
   try {
     const allExercises = await Exercise.find()
     res.status(200).json(allExercises)
+    if (allExercises.length === 0) {
+      return res.status(404).json({ message: 'No Exercises listed' });
+    }
   } catch (error) {
     console.error(error)
     res.status(500).json(error)
