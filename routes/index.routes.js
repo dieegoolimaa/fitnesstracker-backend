@@ -7,12 +7,12 @@ router.get('/', (req, res) => {
 //route files
 const authRoutes = require('./auth.routes');
 const exerciseRoutes = require('./exercise.routes');
-
+const workoutRoutes = require('./workout.routes');
 
 // Use the route files
 router.use('/auth', authRoutes);
 router.use('/exercises', exerciseRoutes);
-
+router.use('/workouts', workoutRoutes);
 
 
 module.exports = router

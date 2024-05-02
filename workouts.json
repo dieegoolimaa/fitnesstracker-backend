@@ -1,0 +1,65 @@
+[
+    {
+      "name": "Upper Body Workout",
+      "description": "A workout focusing on upper body muscles.",
+      "exercises": [
+        {
+          "name": "Push-up",
+          "reps": 10
+        },
+        {
+          "name": "Pull-up",
+          "reps": 10
+        },
+        {
+          "name": "Bench press",
+          "reps": 10
+        }
+      ]
+    },
+    {
+      "name": "Lower Body Workout",
+      "description": "A workout targeting lower body muscles.",
+      "exercises": [
+        {
+          "name": "Squat",
+          "reps": 10
+        },
+        {
+          "name": "Deadlift",
+          "reps": 10
+        },
+        {
+          "name": "Roman Chair Leg Raise",
+          "reps": 10
+        }
+      ]
+    },
+    {
+      "name": "Full Body Workout",
+      "description": "A comprehensive full body workout.",
+      "exercises": [
+        {
+          "name": "Push-up",
+          "reps": 10
+        },
+        {
+          "name": "Pull-up",
+          "reps": 10
+        },
+        {
+          "name": "Squat",
+          "reps": 10
+        },
+        {
+          "name": "Deadlift",
+          "reps": 10
+        },
+        {
+          "name": "Roman Chair Leg Raise",
+          "reps": 10
+        }
+      ]
+    }
+  ]
+  
