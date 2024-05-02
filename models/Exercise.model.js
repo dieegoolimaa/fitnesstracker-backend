@@ -4,7 +4,7 @@ const exerciseSchema = new Schema(
   {
     createdBy: {
       type: Types.ObjectId,
-      ref: "User", // This references the User model for the creator
+      ref: "User", 
     },
     name: {
       type: String,
