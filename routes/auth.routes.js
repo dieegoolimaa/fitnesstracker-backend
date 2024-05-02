@@ -31,49 +31,56 @@ router.post("/signup", async (req, res) => {
   workoutFrequency: req.body.workoutFrequency
 });
 
-    res.status(201).json(newUser);
+    // Return success response
+    res.status(201).json({ success: true, message: 'User created successfully', data: newUser });
   } catch (error) {
-    console.log(error);
-    res.status(500).json(error);
+    // Check for duplicate key error (email already exists)
+    if (error.code === 11000) {
+      res.status(400).json({ success: false, message: 'Email already exists' });
+    } else {
+      console.error('Error creating user:', error);
+      res.status(500).json({ success: false, message: 'Internal server error' });
+    }
   }
 });
+
 // Login
 router.post("/login", async (req, res) => {
   // Get back the credentials from the body
   console.log(req.body);
-  // Check if we have a user with this username
+  // Check if we have a user with this email
   try {
     const potentialUser = await User.findOne({
       email: req.body.email.toLowerCase(),
     });
-    if (potentialUser) {
-      // Check if the password is correct
-      if (bcrypt.compareSync(req.body.password, potentialUser.passwordHash)) {
-        // User has the right credentials
+    if (!potentialUser) {
+      return res.status(400).json({ success: false, message: "No user found with this email" });
+    }
+    
+    // Check if the password is correct
+    if (bcrypt.compareSync(req.body.password, potentialUser.passwordHash)) {
+      // User has the right credentials
+      const authToken = jwt.sign(
+        {
+          userId: potentialUser._id,
+        },
+        process.env.TOKEN_SECRET,
+        {
+          algorithm: "HS256",
+          expiresIn: "6h",
+        }
+      );
 
-        const authToken = jwt.sign(
-          {
-            userId: potentialUser._id,
-          },
-          process.env.TOKEN_SECRET,
-          {
-            algorithm: "HS256",
-            expiresIn: "6h",
-          }
-        );
-
-        res.status(200).json({ token: authToken });
-      } else {
-        res.status(400).json({ mesage: "Incorrect password" });
-      }
+      res.status(200).json({ token: authToken });
     } else {
-      res.status(400).json({ mesage: "No user with this username" });
+      res.status(400).json({ message: "Incorrect password" });
     }
   } catch (error) {
     console.log(error);
-    res.status(500).json({ mesage: "There was a problem" });
+    res.status(500).json({ message: "There was a problem" });
   }
 });
+
 
 // Verify
 router.get("/verify", isAuthenticated, (req, res) => {
