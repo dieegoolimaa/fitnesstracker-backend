@@ -9,8 +9,8 @@
         "reps": 10
       }
     ],
-    "image-1": "https://app.gemoo.com/share/image-annotation/646471828174958592?codeId=DWlnwZGz1oxyW&origin=imageurlgenerator&card=646471826270769152"
-    
+    "image-1": "https://i.imgur.com/VVsnY1T.jpeg",
+    "image-2": "https://i.imgur.com/2nmi0Kz.jpeg"
   },
   {
     "name": "Bench press",
@@ -22,8 +22,8 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/bench-press-1.png",
-    "image-2": "./images/bench-press-2.png"
+    "image-1": "https://i.imgur.com/mkc5H1S.jpeg",
+    "image-2": "https://i.imgur.com/0UCZvpA.jpeg"
   },
   {
     "name": "Pull-up",
@@ -35,8 +35,8 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/pull-up-1.png",
-    "image-2": "./images/pull-up-2.png"
+    "image-1": "https://i.imgur.com/nj3GRkL.jpeg",
+    "image-2": "https://i.imgur.com/rdlA973.jpeg"
   },
   {
     "name": "Barbell row",
@@ -48,8 +48,8 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/barbell-row-1.png",
-    "image-2": "./images/barbell-row-2.png"
+    "image-1": "https://i.imgur.com/SMLwlvB.jpg",
+    "image-2": "https://i.imgur.com/P1M9g4t.jpeg"
   },
   {
     "name": "Military press",
@@ -61,8 +61,8 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/military-press-1.png",
-    "image-2": "./images/military-press-2.png"
+    "image-1": "https://i.imgur.com/N2ELIg0.jpeg",
+    "image-2": "https://i.imgur.com/LQVlX9x.jpeg"
   },
   {
     "name": "Lateral raise",
@@ -74,8 +74,8 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/lateral-raise-1.png",
-    "image-2": "./images/lateral-raise-2.png"
+    "image-1": "https://i.imgur.com/7OExR7D.jpeg",
+    "image-2": "https://i.imgur.com/5QxmhcA.jpeg"
   },
   {
     "name": "Squat",
@@ -87,8 +87,8 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/squat-1.png",
-    "image-2": "./images/squat-2.png"
+    "image-1": "https://i.imgur.com/RuoulY6.jpeg",
+    "image-2": "https://i.imgur.com/kSyEv7f.jpeg"
   },
   {
     "name": "Deadlift",
@@ -100,8 +100,8 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/deadlift-1.png",
-    "image-2": "./images/deadlift-2.png"
+    "image-1": "https://i.imgur.com/BgQHzZP.jpeg",
+    "image-2": "https://i.imgur.com/nsp925m.jpeg"
   },
   {
     "name": "Roman Chair Leg Raise",
@@ -113,7 +113,7 @@
         "reps": 10
       }
     ],
-    "image-1": "./images/roman-chair-leg-raise-1.png",
-    "image-2": "./images/roman-chair-leg-raise-2.png"
+    "image-1": "https://i.imgur.com/RYUrenH.jpeg",
+    "image-2": "https://i.imgur.com/Gq201LC.jpeg"
   }
 ]
