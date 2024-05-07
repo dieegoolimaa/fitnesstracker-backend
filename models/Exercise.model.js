@@ -44,6 +44,12 @@ const exerciseSchema = new Schema(
           },
         },
       ],
+      imageUrls: [
+        {
+          type: String,
+          required: true,
+        },
+      ],
       default: undefined, // Allows 'sets' to be empty if not provided
     },
     selected: {
