@@ -4,47 +4,56 @@
     "target_muscle": "Chest, shoulders, triceps",
     "description": "Bodyweight exercise strengthening chest, shoulders, and triceps. Start in a high plank position, lower your chest down, elbows at 90 degrees, then push back up.",
     "label": "Chest",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
     "image-1": "https://i.imgur.com/VVsnY1T.jpeg",
     "image-2": "https://i.imgur.com/2nmi0Kz.jpeg"
+
   },
   {
     "name": "Bench press",
     "target_muscle": "Chest, shoulders, triceps",
     "description": "Weighted exercise for chest, shoulders, and triceps. Lie on a bench with a barbell above your chest, lower it down, then press back up.",
     "label": "Chest",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
+
     "image-1": "https://i.imgur.com/mkc5H1S.jpeg",
     "image-2": "https://i.imgur.com/0UCZvpA.jpeg"
+
   },
   {
     "name": "Pull-up",
     "target_muscle": "Back (lats), biceps, forearms",
     "description": "Bodyweight exercise for back (lats), biceps, and forearms. Hang from a bar, pull yourself up until your chin clears the bar, then lower yourself down.",
     "label": "Back",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
+
     "image-1": "https://i.imgur.com/nj3GRkL.jpeg",
     "image-2": "https://i.imgur.com/rdlA973.jpeg"
+
   },
   {
     "name": "Barbell row",
     "target_muscle": "Back (lats), biceps",
     "description": "Weighted exercise for back (lats) and biceps. Stand with a barbell on the floor, hinge at hips and knees, grab the bar, row weight towards your chest, then lower back down.",
     "label": "Back",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
@@ -56,64 +65,76 @@
     "target_muscle": "Shoulders",
     "description": "Weighted exercise for shoulders. Stand or sit with a barbell held at shoulder level, press the weight directly overhead, then lower back down.",
     "label": "Shoulders",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
     "image-1": "https://i.imgur.com/N2ELIg0.jpeg",
     "image-2": "https://i.imgur.com/LQVlX9x.jpeg"
+
   },
   {
     "name": "Lateral raise",
     "target_muscle": "Shoulders",
     "description": "Exercise targeting outer shoulders. Stand with dumbbells held at your sides, raise your arms out to the side until shoulder height, then lower back down.",
     "label": "Shoulders",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
+
     "image-1": "https://i.imgur.com/7OExR7D.jpeg",
     "image-2": "https://i.imgur.com/5QxmhcA.jpeg"
+
   },
   {
     "name": "Squat",
     "target_muscle": "Quads, hamstrings, glutes",
     "description": "Bodyweight or weighted exercise for quads, hamstrings, and glutes. Stand with feet shoulder-width apart, lower yourself down as if sitting in a chair, keeping your back straight and core engaged, then push back up.",
     "label": "Legs",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
     "image-1": "https://i.imgur.com/RuoulY6.jpeg",
     "image-2": "https://i.imgur.com/kSyEv7f.jpeg"
+
   },
   {
     "name": "Deadlift",
     "target_muscle": "Hamstrings, glutes, lower back",
     "description": "Weighted exercise for hamstrings, glutes, and lower back. Stand with a barbell on the floor, hinge at hips and knees, grasp the bar with palms facing down, lift the weight up keeping your back straight, then lower back down.",
     "label": "Legs",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
+
     "image-1": "https://i.imgur.com/BgQHzZP.jpeg",
     "image-2": "https://i.imgur.com/nsp925m.jpeg"
+
   },
   {
     "name": "Roman Chair Leg Raise",
     "target_muscle": "Lower abs, hip flexors",
     "description": "Isolates and strengthens the lower abs and hip flexors. Sit in a Roman chair with your back straight and knees bent at 90 degrees. Engage your core and slowly raise your legs straight out in front of you until parallel to the ground (or as high as comfortable). Hold for a second, then lower back down with control.",
     "label": "Abs",
-    "sets": [
+    "setsandreps": [
       {
+        "sets": 3,
         "reps": 10
       }
     ],
     "image-1": "https://i.imgur.com/RYUrenH.jpeg",
     "image-2": "https://i.imgur.com/Gq201LC.jpeg"
+
   }
 ]
