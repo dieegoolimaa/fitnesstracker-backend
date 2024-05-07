@@ -1,5 +1,5 @@
 const router = require('express').Router()
-
+const express = require('express')
 router.get('/', (req, res) => {
   res.json('All good in here')
 })
@@ -13,6 +13,6 @@ const workoutRoutes = require('./workout.routes');
 router.use('/auth', authRoutes);
 router.use('/exercises', exerciseRoutes);
 router.use('/workouts', workoutRoutes);
-
+router.use('/images', express.static('./images'));
 
 module.exports = router
