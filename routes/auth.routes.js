@@ -10,28 +10,27 @@ router.get("/", (req, res) => {
   res.json("Here's the Auth");
 });
 
-// Signup
+// signup
 router.post("/signup", async (req, res) => {
-  // Get back the data from the body
-  console.log(req.body);
+  
   // Encrypt the password
   const salt = bcrypt.genSaltSync(13);
   const passwordHash = bcrypt.hashSync(req.body.password, salt);
+
   // Create a new User
   try {
     const newUser = await User.create({
       name: req.body.name,
-  email: req.body.email,
-  passwordHash,
-  age: req.body.age,
-  gender: req.body.gender,
-  isInstructor: req.body.isInstructor,
-  height: req.body.height,
-  weight: req.body.weight,
-  workoutFrequency: req.body.workoutFrequency
-});
+      email: req.body.email,
+      passwordHash,
+      age: req.body.age,
+      gender: req.body.gender,
+      isInstructor: req.body.isInstructor, 
+      height: req.body.height,
+      weight: req.body.weight,
+      workoutFrequency: req.body.workoutFrequency
+    });
 
-    // Return success response
     res.status(201).json({ success: true, message: 'User created successfully', data: newUser });
   } catch (error) {
     // Check for duplicate key error (email already exists)
@@ -63,6 +62,7 @@ router.post("/login", async (req, res) => {
       const authToken = jwt.sign(
         {
           userId: potentialUser._id,
+          isInstructor: potentialUser.isInstructor, // Include isInstructor property
         },
         process.env.TOKEN_SECRET,
         {
@@ -118,5 +118,37 @@ router.get('/profile', isAuthenticated, async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 });
+
+// New route for instructors to view users
+router.get("/instructors/users", isAuthenticated, async (req, res) => {
+  try {
+    console.log("Fetching users...");
+    // Ensure that the requester is an instructor
+    if (!req.tokenPayload.isInstructor) {
+      console.log("Not an instructor, returning 403 Forbidden");
+      return res.status(403).json({ message: "Forbidden: Only instructors can access this endpoint" });
+    }
+
+    // Fetch all users from the database, specifying which fields to include
+    const users = await User.find({}, { 
+      name: 1,
+      email: 1,
+      age: 1,
+      gender: 1,
+      height: 1,
+      weight: 1,
+      workoutFrequency: 1,
+    });
+
+    // Respond with the list of users
+    res.status(200).json(users);
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+
+
 
 module.exports = router;
