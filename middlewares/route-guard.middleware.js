@@ -16,19 +16,23 @@ const isAuthenticated = (req, res, next) => {
     res.status(401).json("token not provided or not valid");
   }
 };
-
 const isInstructor = async (req, res, next) => {
   const { userId } = req.tokenPayload;
+  console.log("User ID:", userId); // Add this line to check the user ID
   try {
     const user = await User.findById(userId);
-    if (user.roles.includes("isInstructor: true")) {
+    if (user.isInstructor) {
       next();
     } else {
-      res.status(403).json("You shall not pass");
+      console.log("Not an instructor, returning 403 Forbidden");
+      res.status(403).json({ message: "Forbidden: Only instructors can access this endpoint" });
     }
   } catch (error) {
-    res.status(500).json(error);
+    console.error('Error fetching user:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 };
+
+
 
 module.exports = { isAuthenticated, isInstructor };
